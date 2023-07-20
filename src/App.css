@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+header {
+  background-color: black;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo h2 {
+  margin: 0;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-icon .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.open .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .burger-icon {
+    display: flex;
   }
+
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: #000000;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .menu.open ul {
+    flex-direction: column;
+  }
+
+  .menu.open li {
+    margin: 5px 0;
+    padding: 5px;
+  }
+}
+
+.header_btn{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.header_btn:hover{
+    box-shadow: 1px 0px 15px #fff;
+    background-color: white;
+    color:#000000;
 }

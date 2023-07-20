@@ -1,0 +1,166 @@
+.head{
+    text-align: center;
+}
+
+.order-button{
+    border-radius: 10px;
+    background: #fff;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+.order-button:hover{
+    box-shadow: 2px 2px 12px white;
+    cursor: pointer;
+}
+
+.tv-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tv-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    /* border-radius: 25px; */
+    margin-bottom: 50px;
+    margin:20px;
+    text-decoration: none;
+    width: 70%;
+    /* Increase width by 20% */
+    height: 25%;
+    /* Increase height by 25% */
+}
+
+.tv-card:hover {
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 0px 15px #000000;
+}
+.tv-card:hover .tv-images{
+    transform: scale(1.1);
+}
+
+.details-column {
+    flex: 1;
+    border: none;
+    margin-right: 20px;
+}
+.tv-card:hover .details-column {
+    text-shadow: 1px 1px 2px blue, 0 0 1em #fff, 0 0 0.2em #fff;
+    
+}
+
+.image-column {
+    flex: 1;
+    border: none;
+}
+
+.tv-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tv-images img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .tv-card {
+        width: 100%;
+        /* Reset width for responsiveness */
+        height: auto;
+        /* Reset height for responsiveness */
+    }
+
+    .details-column,
+    .image-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .main-container {
+        text-align: center;
+        
+    }
+
+        .shop-info{
+            display: none;
+        }
+
+        .tv-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        .tv-card:hover {
+            cursor: pointer;
+            box-shadow: 1px 0px 15px #000000;
+        }
+    
+        .details-column {
+            flex: 1;
+            margin-right: 20px;
+        }
+    
+        .image-column {
+            flex: 1;
+        }
+    
+        .tv-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .tv-images img {
+            margin: 2px;
+            max-width: 100%;
+            height: auto;
+        }
+
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 10px;
+    }
+}
+
+.original-price{
+    text-decoration: line-through;
+}
+
+.price {
+    display: inline-flex;
+    align-items: center;
+}
+
+.price-label {
+    margin-right: 5px;
+}

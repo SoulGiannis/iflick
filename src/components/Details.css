@@ -1,0 +1,128 @@
+.details-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.details-container {
+    width: 50%;
+}
+
+.image-container {
+    height: 70vh;
+    display: flex;
+    border-right: 5px solid black;
+}
+
+.selected-image {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tv-thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.tv-thumbnails img {
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.tv-thumbnails img.active {
+    border: 5px solid black;
+}
+
+.tv-details {
+    width: 50%;
+    padding: 10px;
+}
+
+
+@media (max-width: 1601px) {
+    .tv-thumbnails {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .tv-thumbnails img {
+        width: 80px;
+        height: 60px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1152px) {
+    .details-main {
+        flex-direction: column;
+    }
+
+    .details-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tv-details {
+        width: 100%;
+    }
+
+    .image-container {
+        border: none;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 852px) {
+    .image-container{
+        height: 70vh;
+    }
+}
+@media (max-width: 652px) {
+    .image-container{
+        height: 55vh;
+    }
+}
+@media (max-width: 552px) {
+    .image-container{
+        height: 45vh;
+    }
+}
+@media (max-width: 452px) {
+    .image-container{
+        height: 40vh;
+    }
+}
+
+.details-table{
+    border:3px solid black;
+    margin: auto;
+    background-color: black;
+    width: 30vw;
+    margin-bottom: 30px;
+}
+
+td{
+    border: 1px solid black;
+    padding:10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+ th {
+    background-color: grey;
+     border: 1px solid black;
+     padding: 10px;
+ }
+
+.hd{
+    text-align: center;
+}
+
